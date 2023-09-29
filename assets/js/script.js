@@ -1,8 +1,12 @@
+const computerChoices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.querySelectorAll("button[data-type]");
     let maxClicksElement = document.getElementById("maxClicks");
+    const playerChoiceElement = document.getElementById("playersChoice");
+    const compChoiceElement = document.getElementById("compChoice");
 
     // Add click event listeners to all buttons
     for (let button of buttons) {
@@ -17,8 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (gameType === "reset") {
                 resetMaxClicks(maxClicksElement);
             } else {
-
-                alert(`You clicked ${gameType}`);
+                runGame(gameType, playerChoiceElement, compChoiceElement);
             }
         });
     }
@@ -41,16 +44,16 @@ function decreaseMaxClicks(maxClicksElement) {
 }
 
 function resetMaxClicks(maxClicksElement) {
-    // Reset maxClicks to 1
     maxClicksElement.innerText = "1";
 }
 
+function runGame(gameType, playerChoiceElement, compChoiceElement) {
+    const computerChoiceIndex = Math.floor(Math.random() * computerChoices.length);
+    const computerChoice = computerChoices[computerChoiceIndex];
 
-function runGame() {
-
-}
-function decideCompChoice() {
-
+    // Update the DOM elements
+    playerChoiceElement.innerText = gameType;
+    compChoiceElement.innerText = computerChoice;
 }
 function results() {
 
@@ -61,8 +64,7 @@ function showPlayerScore() {
 function showCompScore() {
 
 }
-function playerScore() {
-}
+
 function determineResult() {
 
 }
