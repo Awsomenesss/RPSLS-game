@@ -26,11 +26,6 @@
       Scissors Lizard Spock
     </h1>
 
-    <div class="score-area">
-      <p class="score">Players Score<span id="wins">0</span></p>
-      <p class="score">Computers Score<span id="losses">0</span></p>
-    </div>
-
     <div class="results-area">
       <span id="players-choice"></span>
       <span id="vs">Vs</span>
@@ -39,30 +34,41 @@
 
     <div class="game-area">
       <div class="attempt-buttons">
-        <h2>Attempt number<span id="maxClicks">1</span></h2>
-        <button class="incrementBtn"><i class="fas fa-plus"></i></button>
-        <button class="decrementBtn"><i class="fas fa-minus"></i></button>
-        <br />
-        <button class="reset"><i class="fas fa-sync"></i>Reset</button>
+        <h2>Number of Attempt <span id="maxClicks">1</span></h2>
+        <button data-type="increase" class="btn--big btn--gray">
+          <i class="fas fa-plus"></i>
+        </button>
+        <button data-type="decrease" class="btn--big btn--gray">
+          <i class="fas fa-minus"></i>
+        </button>
+        <button data-type="reset" class="btn--big btn--gray">
+          <i class="fas fa-sync"></i>
+        </button>
       </div>
       <div class="controls-area">
-        <button class="btn btn--big btn--green">
+        <h1 class="heading">Your Choices</h1>
+        <button data-type="rock" class="btn btn--big btn--green">
           <i class="far fa-hand-rock"></i>
         </button>
-        <button class="btn btn--big btn--blue">
+        <button data-type="paper" class="btn btn--big btn--blue">
           <i class="far fa-hand-paper"></i>
         </button>
-        <button class="btn btn--big btn--orange">
+        <button data-type="scissors" class="btn btn--big btn--orange">
           <i class="far fa-hand-scissors"></i>
         </button>
         <br />
-        <button class="btn btn--big btn--red">
+        <button data-type="lizard" class="btn btn--big btn--red">
           <i class="far fa-hand-lizard"></i>
         </button>
-        <button class="btn btn--big btn--purple">
+        <button data-type="spock" class="btn btn--big btn--purple">
           <i class="far fa-hand-spock"></i>
         </button>
       </div>
+    </div>
+
+    <div class="score-area">
+      <p class="score">Players Score<span id="wins">0</span></p>
+      <p class="score">Computers Score<span id="losses">0</span></p>
     </div>
 
     <script src="assets/js/script.js"></script>
