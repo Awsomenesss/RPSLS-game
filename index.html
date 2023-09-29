@@ -18,7 +18,7 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Document</title>
+    <title>RPSLS</title>
   </head>
   <body>
     <h1 class="heading">
@@ -31,7 +31,39 @@
       <p class="score">Computers Score<span id="losses">0</span></p>
     </div>
 
-    <div class="game-area"></div>
+    <div class="results-area">
+      <span id="players-choice"></span>
+      <span id="vs">Vs</span>
+      <span id="comp-choice"></span>
+    </div>
+
+    <div class="game-area">
+      <div class="attempt-buttons">
+        <h2>Attempt number<span id="maxClicks">1</span></h2>
+        <button class="incrementBtn"><i class="fas fa-plus"></i></button>
+        <button class="decrementBtn"><i class="fas fa-minus"></i></button>
+        <br />
+        <button class="reset"><i class="fas fa-sync"></i>Reset</button>
+      </div>
+      <div class="controls-area">
+        <button class="btn btn--big btn--green">
+          <i class="far fa-hand-rock"></i>
+        </button>
+        <button class="btn btn--big btn--blue">
+          <i class="far fa-hand-paper"></i>
+        </button>
+        <button class="btn btn--big btn--orange">
+          <i class="far fa-hand-scissors"></i>
+        </button>
+        <br />
+        <button class="btn btn--big btn--red">
+          <i class="far fa-hand-lizard"></i>
+        </button>
+        <button class="btn btn--big btn--purple">
+          <i class="far fa-hand-spock"></i>
+        </button>
+      </div>
+    </div>
 
     <script src="assets/js/script.js"></script>
   </body>
