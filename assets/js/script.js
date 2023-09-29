@@ -1,5 +1,4 @@
 const computerChoices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
-
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 document.addEventListener("DOMContentLoaded", function () {
@@ -47,14 +46,23 @@ function resetMaxClicks(maxClicksElement) {
     maxClicksElement.innerText = "1";
 }
 
-function runGame(gameType, playerChoiceElement, compChoiceElement) {
+function runGame(gameType) {
     const computerChoiceIndex = Math.floor(Math.random() * computerChoices.length);
     const computerChoice = computerChoices[computerChoiceIndex];
 
-    // Update the DOM elements
-    playerChoiceElement.innerText = gameType;
-    compChoiceElement.innerText = computerChoice;
+    // Update the player's choice
+    const playerChoiceButton = document.querySelector(`button[data-type="${gameType}"]`);
+    const playerChoiceHTML = playerChoiceButton.outerHTML;
+
+    document.getElementById("playersChoice").innerHTML = playerChoiceHTML;
+
+    // Update the computer's choice
+    const compChoiceButton = document.querySelector(`button[data-type="${computerChoice.toLowerCase()}"]`);
+    const compChoiceHTML = compChoiceButton.outerHTML;
+
+    document.getElementById("compChoice").innerHTML = compChoiceHTML;
 }
+
 function results() {
 
 }
