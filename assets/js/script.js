@@ -65,3 +65,32 @@ function updateComputerChoice(computerChoice) {
     const compChoiceHTML = compChoiceButton.outerHTML;
     document.getElementById("compChoice").innerHTML = compChoiceHTML;
 }
+
+function calculateWinner(playerChoice, computerChoice) {
+    console.log("Player Choice:", playerChoice);
+    console.log("Computer Choice:", computerChoice);
+
+    let resultDisplay = document.getElementById("resultDisplay");
+    let result = "";
+
+    playerChoice = playerChoice.toLowerCase();
+    computerChoice = computerChoice.toLowerCase();
+
+    if (playerChoice === computerChoice) {
+        result = "Draw!";
+    } else if (
+        (playerChoice === "rock" && (computerChoice === "scissors" || computerChoice === "lizard")) ||
+        (playerChoice === "paper" && (computerChoice === "rock" || computerChoice === "spock")) ||
+        (playerChoice === "scissors" && (computerChoice === "paper" || computerChoice === "lizard")) ||
+        (playerChoice === "lizard" && (computerChoice === "spock" || computerChoice === "paper")) ||
+        (playerChoice === "spock" && (computerChoice === "scissors" || computerChoice === "rock"))
+    ) {
+        result = "You win!";
+    } else {
+        result = "Computer wins!";
+    }
+
+    console.log("Result:", result);
+
+    resultDisplay.innerHTML = result;
+}
