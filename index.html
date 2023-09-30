@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>RPSLS</title>
   </head>
+
   <body>
     <h1 class="heading">
       <img class="logo" src="assets/images/logo.png" alt="logo" />Rock Paper
@@ -27,6 +28,7 @@
     </h1>
 
     <div class="results-area">
+      <span id="resultDisplay">Choose an option to start the game</span>
       <span id="playerChoiceLabel">You</span>
       <span id="playersChoice"></span>
       <span id="vs">Vs</span>
@@ -36,7 +38,7 @@
 
     <div class="game-area">
       <div class="attempt-buttons">
-        <h2>Number of Attempt <span id="maxClicks">1</span></h2>
+        <h2>Attempt <span id="maxClicks">3</span></h2>
         <button data-type="increase" class="btn--big btn--gray">
           <i class="fas fa-plus"></i>
         </button>
@@ -69,8 +71,8 @@
     </div>
 
     <div class="score-area">
-      <p class="score">Players Score<span id="wins">0</span></p>
-      <p class="score">Computers Score<span id="losses">0</span></p>
+      <p class="score">Your Score:<span id="wins">0</span></p>
+      <p class="score">Computers Score:<span id="losses">0</span></p>
     </div>
 
     <script src="assets/js/script.js"></script>
