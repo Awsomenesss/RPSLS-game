@@ -159,10 +159,10 @@ I used [Balsamiq](https://balsamiq.com/) to create my wireframes as this gives t
 ### Wire-frames
 
 index page:
-[![index_web](documentation-assets/wireframe-images/index_web.png)](documentation-assets/intro_wireframe.PNG)
+[![index_web](documentation-assets/intro_wireframe.PNG)
 
 Game page:
-[![index_mobile](documentation-assets/wireframe-images/index_mobile.png)](documentation-assets/GAME_PAGE_wireframe.PNG)
+[![index_mobile](documentation-assets/GAME_PAGE_wireframe.PNG)
 
 
 
@@ -255,7 +255,7 @@ I checked the accessibility of the page using lighthouse.
 
 ### Responsive Tools
 
-I used [Am I Responsive](http://ami.responsivedesign.is/) and [RESPONSIVE DESIGN CHECKER] (https://www.responsivedesignchecker.com/) to make sure that all my pages are responsive to all devices.
+I used [Am I Responsive](http://ami.responsivedesign.is/) and [RESPONSIVE DESIGN CHECKER](https://www.responsivedesignchecker.com/) to make sure that all my pages are responsive to all devices.
 
 ### W3C Validator Tools
 
