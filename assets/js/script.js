@@ -32,14 +32,14 @@ function increaseMaxClicks(maxClicksElement) {
 
 function decreaseMaxClicks(maxClicksElement) {
     let maxClicks = parseInt(maxClicksElement.innerText);
-    if (maxClicks > 1) {
+    if (maxClicks > 3) {
         maxClicks--;
         maxClicksElement.innerText = maxClicks;
     }
 }
 
 function resetMaxClicks(maxClicksElement) {
-    maxClicksElement.innerText = "1";
+    maxClicksElement.innerText = "3";
 }
 
 function runGame(gameType) {
@@ -86,11 +86,26 @@ function calculateWinner(playerChoice, computerChoice) {
         (playerChoice === "spock" && (computerChoice === "scissors" || computerChoice === "rock"))
     ) {
         result = "You win!";
+        incrementPlayerWins();
     } else {
         result = "Computer wins!";
+        incrementComputerWins();
     }
 
     console.log("Result:", result);
 
     resultDisplay.innerHTML = result;
+}
+
+let playerWins = 0;
+let computerWins = 0;
+
+function incrementPlayerWins() {
+    playerWins++;
+    document.getElementById("wins").textContent = playerWins;
+}
+
+function incrementComputerWins() {
+    computerWins++;
+    document.getElementById("losses").textContent = computerWins;
 }
