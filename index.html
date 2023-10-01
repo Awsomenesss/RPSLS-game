@@ -4,92 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font awesome and google fonts-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Benne&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Rock, Paper, Scissors, Lizard, Spock</title>
+    <title>RPSLS - Rock Paper Scissors Lizard Spock</title>
   </head>
 
   <body>
-    <header>
-      <div class="heading">
-        <h1 class="title">
-          Rock, Paper, Scissors, Lizard, Spock
-          <br />
-          Rock, Paper, Scissors, Lizard, Spock
-        </h1>
-        <img
-          class="logo"
-          src="assets/images/olympic_rings_logo.svg"
-          alt="logo"
-        />
-      </div>
-    </header>
-
-    <!-- Intro, Rules, Start, Contact Buttons with popup modals -->
-    <div class="menu_buttons">
-      <div class="modals">
-        <a class="index_btn" id="intro" href="#open_intro_modal"
-          >Introduction</a
-        >
-        <div id="open_intro_modal" class="modalDialog openModal">
-          <div>
-            <a href="#close" title="Close" class="close">X</a>
-            <h2 class="modal_title">Introduction</h2>
-            <p>
-              Rock, Paper, Scissors, Lizard, Spock is a game of chance that
-              expands. It is first used to settle a dispute about what to watch
-              on TV between Sheldon and Raj in "The Lizard-Spock Expansion".
-              <br />
-              <br />
-              It is mentioned again in "The Rothman Disintegration", where
-              Sheldon explains the rules to Penny and Barry Kripke.
-              <br />
-              <br />
-              The game was originally created by Sam Kass with Karen Bryla.
-              According to an interview with Kass, the series producers did not
-              originally ask for permission to use the game, but Kass was
-              officially referenced by Sheldon as the creator of the game during
-              the "The Rothman Disintegration", after which he states, "Hail Sam
-              Kass!" to which Leonard, Howard, Raj, and Sheldon all then chant
-              "Hail!" while raising their hands.
-              <br />
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <a class="index_btn" href="game.html">Start Game</a>
-
-      <div class="modals">
-        <a class="index_btn" href="#open_contact_modal">Contact</a>
-        <div id="open_contact_modal" class="modalDialog openModal">
-          <div>
-            <a href="#close" title="Close" class="close">X</a>
-          </div>
-        </div>
-      </div>
+    <div class="container">
+      <h1 class="heading">
+        <img class="logo" src="assets/images/logo.png" alt="logo" />
+        Welcome to RPSLS
+      </h1>
+      <p class="new-game-intro">
+        RPSLS is a luck game where you choose between five things: Rock, Paper,
+        Scissors, Lizard, and Spock!
+      </p>
+      <p class="new-game-intro">
+        It's easy to play.You can also set the number of a round how many times
+        you want to try, starting from 3 to 12 .To play again, press the
+        "Reset"button.
+      </p>
+      <p class="new-game-intro">Here's how it works:</p>
+      <ul class="new-game-rules">
+        <li>
+          <strong>Rock</strong> can smash <em>Scissors</em> or <em>Lizard</em>.
+          Imagine a big rock squishing scissors or a tiny lizard. That's how
+          rock wins!
+        </li>
+        <li>
+          <strong>Paper</strong> can cover <em>Rock</em> or outsmart
+          <em>Spock</em>. Picture paper hiding rock or being really clever with
+          Spock. That's how paper wins!
+        </li>
+        <li>
+          <strong>Scissors</strong> can cut <em>Paper</em> or snip
+          <em>Lizard</em>. Think of scissors slicing through paper or lizard.
+          That's how scissors win!
+        </li>
+        <li>
+          <strong>Lizard</strong> can poison <em>Spock</em> or get squished by
+          <em>Rock</em>. Imagine a sneaky lizard poisoning Spock or rock
+          squishing it. That's how lizard wins!
+        </li>
+        <li>
+          <strong>Spock</strong> can smash <em>Scissors</em> or vaporize
+          <em>Rock</em>. See Spock using his superpowers to win against scissors
+          or rocks. That's how Spock wins!
+        </li>
+      </ul>
+      <p class="new-game-intro">
+        Are you ready to use your imagination and try your luck ? Click the
+        "Play Now" button and let's go!
+      </p>
+      <button
+        class="new-play-button"
+        onclick="window.location.href='game.html'"
+      >
+        Play Now
+      </button>
     </div>
-
-    <!-- Footer with social media buttons/links-->
-
-    <!-- JavaScript link -->
-    <script src="assets/js/script.js"></script>
-    <script
-      src="https://kit.fontawesome.com/2509113cbf.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>

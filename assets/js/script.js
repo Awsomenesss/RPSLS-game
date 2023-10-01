@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function increaseMaxClicks(maxClicksElement) {
-        if (maxClicks < 10) {
+        if (maxClicks < 12) {
             maxClicks++;
             maxClicksElement.innerText = maxClicks;
         }

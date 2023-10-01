@@ -1,8 +1,16 @@
 body {
     background-color: rgb(56, 49, 49);
     font-family: "Nabla", sans-serif;
-    color: #445361;
+    color: #e8eaec;
     text-align: center;
+}
+
+
+/* Container Styles */
+.new-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* --------- Heading */
@@ -10,11 +18,72 @@ body {
 .heading {
     text-align: center;
     font-size: 1.5rem;
+
 }
 
 .logo {
     height: 40px;
     padding-right: 5px;
+}
+
+/* Game Intro Styles */
+.new-game-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.new-play-button:hover {
+    background-color: #45a049;
+}
+
+/* Game Rules Button Styles */
+.new-game-rules-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #008cba;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-game-rules-button:hover {
+    background-color: #0073a3;
+}
+
+/* Play Button Styles */
+.new-play-button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Game Rules Styles */
+.new-game-rules {
+    font-size: 1rem;
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.new-game-rules li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.new-game-rules li strong {
+    font-weight: bold;
+}
+
+.new-game-rules li em {
+    font-style: italic;
 }
 
 /* --------- Game layout */
@@ -235,10 +304,6 @@ body {
 
     .btn--big {
         margin: 10px 10px;
-    }
-
-    .question-area {
-        padding: 10px 0;
     }
 
 }
