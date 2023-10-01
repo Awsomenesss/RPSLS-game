@@ -1,4 +1,6 @@
 const computerChoices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+let maxClicks = 3;
+let playerClicks = 0;
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 document.addEventListener("DOMContentLoaded", function () {
@@ -16,14 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (gameType === "reset") {
                 resetMaxClicks(maxClicksElement);
             } else {
-                runGame(gameType);
+                if (playerClicks < maxClicks) {
+                    runGame(gameType);
+                    playerClicks++;
+                    checkForWinner();
+                }
             }
         });
     }
 });
 
 function increaseMaxClicks(maxClicksElement) {
-    let maxClicks = parseInt(maxClicksElement.innerText);
     if (maxClicks < 10) {
         maxClicks++;
         maxClicksElement.innerText = maxClicks;
@@ -31,7 +36,6 @@ function increaseMaxClicks(maxClicksElement) {
 }
 
 function decreaseMaxClicks(maxClicksElement) {
-    let maxClicks = parseInt(maxClicksElement.innerText);
     if (maxClicks > 3) {
         maxClicks--;
         maxClicksElement.innerText = maxClicks;
@@ -39,7 +43,8 @@ function decreaseMaxClicks(maxClicksElement) {
 }
 
 function resetMaxClicks(maxClicksElement) {
-    maxClicksElement.innerText = "3";
+    maxClicks = 3;
+    maxClicksElement.innerText = maxClicks;
 }
 
 function runGame(gameType) {
@@ -113,12 +118,21 @@ function incrementComputerWins() {
     document.getElementById("losses").textContent = computerWins;
 }
 function checkForWinner() {
-    let playerScore = parseInt(document.getElementById("wins").innerText);
-    let compScore = parseInt(document.getElementById("losses").innerText);
-
-    if (playerScore === maxClicks) {
+    if (playerClicks >= maxClicks) {
         endGame("You Win!");
-    } else if (compScore === maxClicks) {
-        endGame("Computer Wins!");
+    } else if (playerWins + computerWins === maxClicks) {
+        endGame("You Lost!");
+    } else if (playerWins + computerWins === maxClicks && playerClicks === maxClicks) {
+        endGame("It's a Draw!");
     }
+}
+function endGame(message) {
+    const resultDisplay = document.getElementById("resultDisplay");
+    resultDisplay.innerHTML = message;
+
+    // Disable button clicks by removing the event listeners from the buttons
+    const buttons = document.querySelectorAll("button[data-type]");
+    buttons.forEach(button => {
+        button.removeEventListener("click", handleClick);
+    });
 }
