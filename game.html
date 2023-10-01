@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font awesome and google fonts -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>RPSLS</title>
+  </head>
+
+  <body>
+    <h1 class="heading">
+      <img class="logo" src="assets/images/logo.png" alt="logo" />Rock Paper
+      Scissors Lizard Spock
+    </h1>
+
+    <div class="results-area">
+      <span id="resultDisplay"></span>
+      <span id="playerChoiceLabel"></span>
+      <span id="playersChoice"></span>
+      <span id="vs">Vs</span>
+      <span id="compChoice"></span>
+      <span id="compChoiceLabel">Computer</span>
+    </div>
+
+    <div class="game-area">
+      <div class="attempt-buttons">
+        <h2>Best of <span id="maxClicks">3</span></h2>
+        <button data-type="increase" class="btn--big btn--gray">
+          <i class="fas fa-plus"></i>
+        </button>
+        <button data-type="decrease" class="btn--big btn--gray">
+          <i class="fas fa-minus"></i>
+        </button>
+        <button data-type="reset" class="btn--big btn--gray">
+          <i class="fas fa-sync"></i>
+        </button>
+      </div>
+      <div class="controls-area">
+        <h1 class="heading">Your Choices</h1>
+        <button data-type="rock" class="btn btn--big btn--green">
+          <i class="far fa-hand-rock"></i>
+        </button>
+        <button data-type="paper" class="btn btn--big btn--blue">
+          <i class="far fa-hand-paper"></i>
+        </button>
+        <button data-type="scissors" class="btn btn--big btn--orange">
+          <i class="far fa-hand-scissors"></i>
+        </button>
+        <br />
+        <button data-type="lizard" class="btn btn--big btn--red">
+          <i class="far fa-hand-lizard"></i>
+        </button>
+        <button data-type="spock" class="btn btn--big btn--purple">
+          <i class="far fa-hand-spock"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="score-area">
+      <div class="round-result-container">
+        <h1 class="round-result" id="round-result"></h1>
+      </div>
+      <p class="score">Your Score:<span id="wins">0</span></p>
+      <p class="score">Computers Score:<span id="losses">0</span></p>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

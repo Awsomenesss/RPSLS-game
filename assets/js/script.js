@@ -8,7 +8,13 @@ let gameEnded = false; // Add a gameEnded flag
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("button[data-type]");
     const maxClicksElement = document.getElementById("maxClicks");
-    const resetButton = document.querySelector("button[data-type='reset']"); // Select the "Reset" button
+    const resetButton = document.querySelector("button[data-type='reset']");
+    const winsElement = document.getElementById("wins");
+    const lossesElement = document.getElementById("losses");
+    const resultDisplay = document.getElementById("resultDisplay");
+    const playersChoiceElement = document.getElementById("playersChoice");
+    const compChoiceElement = document.getElementById("compChoice");
+    const roundResultDisplay = document.getElementById("round-result");
 
     resetButton.addEventListener("click", function () {
         // Reset wins and game state
@@ -17,10 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
         winsElement.textContent = playerWins;
         lossesElement.textContent = computerWins;
         resultDisplay.textContent = '';
-        playerClicks = 0; // Reset the playerClicks
+        playerClicks = 0;
         gameEnded = false;
         maxClicks = 3;
         maxClicksElement.innerText = maxClicks;
+        playersChoiceElement.innerHTML = '';
+        compChoiceElement.innerHTML = '';
+        roundResultDisplay.innerHTML = '';
     });
 
     for (const button of buttons) {
@@ -118,6 +127,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Check for a winner after each round
         checkForWinner();
+
+
     }
 
     let playerWins = 0;
@@ -143,9 +154,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function checkAndDisplayResult() {
+        const yourScoreElement = document.querySelector("#wins");
+        const computerScoreElement = document.querySelector("#losses");
+
+        const yourScore = parseInt(yourScoreElement.innerText);
+        const computerScore = parseInt(computerScoreElement.innerText);
+
+        if (yourScore > computerScore) {
+            roundResultDisplay.innerHTML = "You won this round!";
+        } else if (yourScore < computerScore) {
+            roundResultDisplay.innerHTML = "You lost this round!";
+        } else {
+            roundResultDisplay.innerHTML = "It's a draw!";
+        }
+    }
     function endGame(message) {
         const resultDisplay = document.getElementById("resultDisplay");
         resultDisplay.innerHTML = message;
         gameEnded = true;
+        // Display the round result
+        checkAndDisplayResult();
     }
 });

@@ -4,77 +4,92 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- font awesome and google fonts -->
+    <!-- Font awesome and google fonts-->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Benne&display=swap"
       rel="stylesheet"
     />
-
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>RPSLS</title>
+    <title>Rock, Paper, Scissors, Lizard, Spock</title>
   </head>
 
   <body>
-    <h1 class="heading">
-      <img class="logo" src="assets/images/logo.png" alt="logo" />Rock Paper
-      Scissors Lizard Spock
-    </h1>
-
-    <div class="results-area">
-      <span id="resultDisplay"></span>
-      <span id="playerChoiceLabel"></span>
-      <span id="playersChoice"></span>
-      <span id="vs">Vs</span>
-      <span id="compChoice"></span>
-      <span id="compChoiceLabel">Computer</span>
-    </div>
-
-    <div class="game-area">
-      <div class="attempt-buttons">
-        <h2>Attempt <span id="maxClicks">3</span></h2>
-        <button data-type="increase" class="btn--big btn--gray">
-          <i class="fas fa-plus"></i>
-        </button>
-        <button data-type="decrease" class="btn--big btn--gray">
-          <i class="fas fa-minus"></i>
-        </button>
-        <button data-type="reset" class="btn--big btn--gray">
-          <i class="fas fa-sync"></i>
-        </button>
+    <header>
+      <div class="heading">
+        <h1 class="title">
+          Rock, Paper, Scissors, Lizard, Spock
+          <br />
+          Rock, Paper, Scissors, Lizard, Spock
+        </h1>
+        <img
+          class="logo"
+          src="assets/images/olympic_rings_logo.svg"
+          alt="logo"
+        />
       </div>
-      <div class="controls-area">
-        <h1 class="heading">Your Choices</h1>
-        <button data-type="rock" class="btn btn--big btn--green">
-          <i class="far fa-hand-rock"></i>
-        </button>
-        <button data-type="paper" class="btn btn--big btn--blue">
-          <i class="far fa-hand-paper"></i>
-        </button>
-        <button data-type="scissors" class="btn btn--big btn--orange">
-          <i class="far fa-hand-scissors"></i>
-        </button>
-        <br />
-        <button data-type="lizard" class="btn btn--big btn--red">
-          <i class="far fa-hand-lizard"></i>
-        </button>
-        <button data-type="spock" class="btn btn--big btn--purple">
-          <i class="far fa-hand-spock"></i>
-        </button>
+    </header>
+
+    <!-- Intro, Rules, Start, Contact Buttons with popup modals -->
+    <div class="menu_buttons">
+      <div class="modals">
+        <a class="index_btn" id="intro" href="#open_intro_modal"
+          >Introduction</a
+        >
+        <div id="open_intro_modal" class="modalDialog openModal">
+          <div>
+            <a href="#close" title="Close" class="close">X</a>
+            <h2 class="modal_title">Introduction</h2>
+            <p>
+              Rock, Paper, Scissors, Lizard, Spock is a game of chance that
+              expands. It is first used to settle a dispute about what to watch
+              on TV between Sheldon and Raj in "The Lizard-Spock Expansion".
+              <br />
+              <br />
+              It is mentioned again in "The Rothman Disintegration", where
+              Sheldon explains the rules to Penny and Barry Kripke.
+              <br />
+              <br />
+              The game was originally created by Sam Kass with Karen Bryla.
+              According to an interview with Kass, the series producers did not
+              originally ask for permission to use the game, but Kass was
+              officially referenced by Sheldon as the creator of the game during
+              the "The Rothman Disintegration", after which he states, "Hail Sam
+              Kass!" to which Leonard, Howard, Raj, and Sheldon all then chant
+              "Hail!" while raising their hands.
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <a class="index_btn" href="game.html">Start Game</a>
+
+      <div class="modals">
+        <a class="index_btn" href="#open_contact_modal">Contact</a>
+        <div id="open_contact_modal" class="modalDialog openModal">
+          <div>
+            <a href="#close" title="Close" class="close">X</a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="score-area">
-      <p class="score">Your Score:<span id="wins">0</span></p>
-      <p class="score">Computers Score:<span id="losses">0</span></p>
-    </div>
+    <!-- Footer with social media buttons/links-->
 
+    <!-- JavaScript link -->
     <script src="assets/js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2509113cbf.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
