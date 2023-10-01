@@ -95,6 +95,9 @@ function calculateWinner(playerChoice, computerChoice) {
     console.log("Result:", result);
 
     resultDisplay.innerHTML = result;
+
+    // Check for a winner after each round
+    checkForWinner();
 }
 
 let playerWins = 0;
@@ -108,4 +111,14 @@ function incrementPlayerWins() {
 function incrementComputerWins() {
     computerWins++;
     document.getElementById("losses").textContent = computerWins;
+}
+function checkForWinner() {
+    let playerScore = parseInt(document.getElementById("wins").innerText);
+    let compScore = parseInt(document.getElementById("losses").innerText);
+
+    if (playerScore === maxClicks) {
+        endGame("You Win!");
+    } else if (compScore === maxClicks) {
+        endGame("Computer Wins!");
+    }
 }
