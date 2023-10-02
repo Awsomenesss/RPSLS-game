@@ -96,8 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function calculateWinner(playerChoice, computerChoice) {
-        console.log("Player Choice:", playerChoice);
-        console.log("Computer Choice:", computerChoice);
 
         let resultDisplay = document.getElementById("resultDisplay");
         let result = "";
@@ -121,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
             incrementComputerWins();
         }
 
-        console.log("Result:", result);
 
         resultDisplay.innerHTML = result;
 

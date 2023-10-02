@@ -262,18 +262,18 @@ I used [Am I Responsive](http://ami.responsivedesign.is/) and [RESPONSIVE DESIGN
 I used [W3C Markup](https://validator.w3.org/#validate_by_input+with_options) to check for any errors within my HTML pages.
 I had no errors in the index and start_game page.
 
-![index HTML validator](assets/images/index_html_validator_results.png)
-![start_game HTML validator](assets/images/game_html_validator_results.png)
+![HTML validator](documentation-assets/w3c.PNG)
+
 
 I used [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) to check for any errors within my CSS stylesheet.
 I had no errors in my CSS file.
 
-![css validator](assets/images/css_validator_results.png)
+![css validator](documentation-assets/jigsaw.PNG)
 
 I used [JS Hint](https://jshint.com/) to check for any errors within my JavaScript file.
 I had no errors in my JavaScript files.
 
-![javascript validator](assets/images/javascript_validator_results.png)
+![javascript validator](documentation-assets/javascript_validator.PNG)
 
 ## Manual Testing
 
@@ -352,36 +352,27 @@ The site was deployed to GitHub pages. The steps to deploy a site are as follows
 ![Git Deploy Image](documentation-assets/github.PNG)
 </details><hr>
 
-<a name="end-product"></a>
+<a name="deployment"></a>
+
 
 # 7. Credits
-
-
-
-# 8. Known Bugs
-
-[Go to the top](#table-of-contents)
-
-- The close "x" button on the popup modals for the index page is not centred. This was rectified by adding padding to the top of the close button.
-
-- The player/CPU labels on the scoreboard for the game page is not vertically aligned. This was rectified by adding padding to the bottom.
-
-- The placeholder text for the contact form popup modal is too close to the left and top side edge, making the characters of the input text hard to read. The was rectified by adding padding to the left side and padding to the top for the message input.
-
-<a name="credits"></a>
-
-# 9. Credits
 
 [Go to the top](#table-of-contents)
 
 ### Code
 
-- The popup modals come from [JS Fiddle](https://jsfiddle.net/kumarmuthaliar/GG9Sa/1/)
-- The background animation came from [Code Pen](https://codepen.io/anon/embed/RZogMa?height=500&theme-id=1&slug-hash=RZogMa&default-tab=result#css-box)
+- The game uses **gameEnded** flag to keep track of whether the game has ended or not [game state flag](https://stackoverflow.com/questions/64283015/vanilla-javascript-end-game-when-player-reaches-a-certain-score)
+- **document.querySelector** is used to select the HTML button element that corresponds to the player's choice  to dynamically construct a CSS attribute selector that targets the specific button element with the corresponding data-type attribute [querySelector](https://www.w3schools.com/jsref/met_document_queryselector.asp)
+- **toLowerCase** is used to  to ensure that the computerChoice matches the format of the data-type attribute for the buttons.
+- 
 
 ### Content
 
-- All images came from [Google Images](https://www.google.com/imghp?hl=en)
-- All weapon icons came from [Font Awesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2)
-- The winner and loser GIFs came from [GIPHY](https://giphy.com/)
-- The game rules came from [Big Bang Theory Wiki](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)
+- The font came from [Google Fonts](https://fonts.google.com/)
+- The HTML icons came from [Font Awesome](https://fontawesome.com/)
+- The favicon came from [Favicon](https://favicon.io/)
+
+# Acknowledgments
+
+The site was completed as a part of a Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/) and is my Portfolio Project 2. I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), my educator [Luke Walters](https://www.linkedin.com/in/luke-walters-leatherbarrow-531107101/), and my brother [Jack Ralph](https://www.linkedin.com/in/jackthomasralph/), the Slack community, and all at the Code Institute for their help and support.
+
