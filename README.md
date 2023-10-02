@@ -352,7 +352,7 @@ The site was deployed to GitHub pages. The steps to deploy a site are as follows
 ![Git Deploy Image](documentation-assets/github.PNG)
 </details><hr>
 
-<a name="deployment"></a>
+<a name="credits"></a>
 
 
 # 7. Credits
@@ -374,5 +374,5 @@ The site was deployed to GitHub pages. The steps to deploy a site are as follows
 
 # Acknowledgments
 
-The site was completed as a part of a Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/) and is my Portfolio Project 2. I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), my educator [Luke Walters](https://www.linkedin.com/in/luke-walters-leatherbarrow-531107101/), and my brother [Jack Ralph](https://www.linkedin.com/in/jackthomasralph/), the Slack community, and all at the Code Institute for their help and support.
+The site was completed as a part of a Full Stack Software Developer Diploma at the [Code Institute](https://codeinstitute.net/) and is my Portfolio Project 2. I would like to thank all at the Code Institute for their help and support.
 
